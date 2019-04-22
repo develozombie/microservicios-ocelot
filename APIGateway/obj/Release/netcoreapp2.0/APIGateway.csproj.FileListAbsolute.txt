@@ -1,0 +1,12 @@
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\bin\Release\netcoreapp2.0\configuration.json
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\bin\Release\netcoreapp2.0\APIGateway.deps.json
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\bin\Release\netcoreapp2.0\APIGateway.runtimeconfig.json
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\bin\Release\netcoreapp2.0\APIGateway.runtimeconfig.dev.json
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\bin\Release\netcoreapp2.0\APIGateway.dll
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\bin\Release\netcoreapp2.0\APIGateway.pdb
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\obj\Release\netcoreapp2.0\APIGateway.csprojAssemblyReference.cache
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\obj\Release\netcoreapp2.0\APIGateway.csproj.CoreCompileInputs.cache
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\obj\Release\netcoreapp2.0\APIGateway.AssemblyInfoInputs.cache
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\obj\Release\netcoreapp2.0\APIGateway.AssemblyInfo.cs
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\obj\Release\netcoreapp2.0\APIGateway.dll
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\APIGateway\obj\Release\netcoreapp2.0\APIGateway.pdb

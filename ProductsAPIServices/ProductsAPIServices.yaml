@@ -1,0 +1,58 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: productsapiservice
+  labels:
+    app: productsapiservice
+spec:
+  ports:
+  - name: http
+    protocol: TCP
+    port: 9002
+    targetPort: 9002
+  selector:
+    app: productsapiservice
+  type: ClusterIP  
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: productsapiservice
+  labels:
+    app: productsapiservice
+spec:
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: productsapiservice
+    spec:
+      containers:
+      - image: aksplaygroud.azurecr.io/productsapiservice
+        name: productsapiservice
+        ports:
+        - containerPort: 80
+          name: http
+        resources:
+          limits:
+            cpu: 900m
+          requests:
+            cpu: 100m
+      imagePullSecrets:
+        - name: regsecret
+---      
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: productsapiservice
+spec:
+  scaleTargetRef:
+    kind: Deployment
+    name: productsapiservice
+  minReplicas: 2
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 70
