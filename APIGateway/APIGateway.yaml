@@ -35,7 +35,7 @@ spec:
       - image: aksplaygroud.azurecr.io/apigateway
         name: apigateway
         ports:
-        - containerPort: 80
+        - containerPort: 9000
           name: http
         resources:
           limits:
