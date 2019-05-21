@@ -1,19 +1,17 @@
-FROM microsoft/aspnetcore:2.0 AS base
+FROM microsoft/dotnet:sdk AS build-env
 WORKDIR /app
 EXPOSE 9002
 
-FROM microsoft/aspnetcore-build:2.0 AS build
-WORKDIR /src
-COPY ["ProductsAPIServices/ProductsAPIServices.csproj", "ProductsAPIServices/"]
-RUN dotnet restore "ProductsAPIServices/ProductsAPIServices.csproj"
-COPY . .
-WORKDIR "/src/ProductsAPIServices"
-RUN dotnet build "ProductsAPIServices.csproj" -c Release -o /app
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish "ProductsAPIServices.csproj" -c Release -o /app
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+# Build runtime image
+FROM microsoft/dotnet:aspnetcore-runtime
 WORKDIR /app
-COPY --from=publish /app .
+COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "ProductsAPIServices.dll"]
