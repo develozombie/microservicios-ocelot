@@ -32,7 +32,7 @@ spec:
         app: apigateway
     spec:
       containers:
-      - image: aksplaygroud.azurecr.io/apigateway
+      - image: acrplayground01.azurecr.io/api
         name: apigateway
         ports:
         - containerPort: 9000
