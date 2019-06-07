@@ -32,7 +32,7 @@ spec:
         app: productsapiservice
     spec:
       containers:
-      - image: aksplaygroud.azurecr.io/productsapiservices
+      - image: acrplayground01.azurecr.io/products
         name: productsapiservice
         ports:
         - containerPort: 9002
