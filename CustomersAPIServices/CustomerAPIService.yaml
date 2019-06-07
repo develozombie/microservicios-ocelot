@@ -32,7 +32,7 @@ spec:
         app: customerapiservice
     spec:
       containers:
-      - image: aksplaygroud.azurecr.io/customersapiservices
+      - image: acrplayground01.azurecr.io/customers
         name: customerapiservice
         ports:
         - containerPort: 9001
