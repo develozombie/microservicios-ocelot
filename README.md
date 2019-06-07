@@ -5,4 +5,4 @@ Hola Soy Jose Yapur y este es un proyecto que utilizo para los talleres de Micro
 
 # Files
 
-La compilación de imagenes de Docker funciona únicamente en OSX y Linux, para modificar el mapeo del API Gateway ingresar al archivo Ocelot.json
+La compilación de imagenes de Docker funciona únicamente en OSX y Linux, para modificar el mapeo del API Gateway ingresar al archivo APIGateway/Configuration.json
